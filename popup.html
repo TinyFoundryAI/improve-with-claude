@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Improve with Claude – Settings</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Improve with Claude</h1>
+      <p class="subtitle">Select text, right-click, improve, paste.</p>
+    </header>
+
+    <div class="field">
+      <label for="api-key">Anthropic API Key</label>
+      <input
+        type="password"
+        id="api-key"
+        placeholder="sk-ant-api03-..."
+        spellcheck="false"
+        autocomplete="off"
+      />
+      <button id="toggle-key" class="toggle-btn" title="Show / hide key">Show</button>
+    </div>
+
+    <div class="field">
+      <label for="system-prompt">System Prompt</label>
+      <textarea id="system-prompt" rows="5" spellcheck="false"></textarea>
+      <p class="hint">
+        This prompt tells Claude how to improve your text. Edit freely.
+      </p>
+    </div>
+
+    <div class="actions">
+      <button id="save-btn" class="primary">Save</button>
+      <button id="reset-btn" class="secondary">Reset prompt</button>
+    </div>
+
+    <div id="status" class="status" role="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
