@@ -7,7 +7,7 @@
 <p align="center">
   A Chrome extension that improves any selected text using Claude AI.<br/>
   Select. Right-click. Improve. Paste.<br/><br/>
-  <em>"Discobombulating your text..." and 14 other delightful processing messages included.</em>
+  <em>"Discobombulating your text..." and 14 other delightfully-claude-like processing messages included.</em>
 </p>
 
 ---
