@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="bubble" x1="100" y1="80" x2="400" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFBEB"/>
+      <stop offset="100%" stop-color="#FEF3C7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#92400E" flood-opacity="0.25"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="16" y="16" width="480" height="480" rx="96" ry="96" fill="url(#bg)"/>
+
+  <!-- Speech bubble -->
+  <g filter="shadow">
+    <path d="M120 130 C120 108, 138 90, 160 90 L352 90 C374 90, 392 108, 392 130 L392 290 C392 312, 374 330, 352 330 L220 330 L160 385 L175 330 L160 330 C138 330, 120 312, 120 290 Z" fill="url(#bubble)"/>
+  </g>
+
+  <!-- Text lines in the bubble -->
+  <g opacity="0.25">
+    <rect x="160" y="140" width="180" height="12" rx="6" fill="#92400E"/>
+    <rect x="160" y="170" width="140" height="12" rx="6" fill="#92400E"/>
+    <rect x="160" y="200" width="192" height="12" rx="6" fill="#92400E"/>
+    <rect x="160" y="230" width="110" height="12" rx="6" fill="#92400E"/>
+    <rect x="160" y="260" width="160" height="12" rx="6" fill="#92400E"/>
+  </g>
+
+  <!-- Magic wand / pencil overlaid -->
+  <g filter="glow" transform="translate(280, 200) rotate(-45)">
+    <!-- Pencil body -->
+    <rect x="0" y="-10" width="160" height="20" rx="4" fill="#FFFBEB"/>
+    <rect x="0" y="-10" width="160" height="20" rx="4" fill="#FDE68A" opacity="0.5"/>
+    <!-- Pencil tip -->
+    <polygon points="-24,0 0,-10 0,10" fill="#92400E"/>
+    <!-- Eraser -->
+    <rect x="148" y="-10" width="24" height="20" rx="4" fill="#F59E0B"/>
+    <rect x="148" y="-10" width="24" height="20" rx="4" fill="#D97706" opacity="0.5"/>
+    <!-- Band -->
+    <rect x="140" y="-10" width="10" height="20" fill="#B45309"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g fill="#FFFBEB" filter="glow">
+    <!-- Sparkle 1 - top right -->
+    <path d="M400 80 L405 95 L420 100 L405 105 L400 120 L395 105 L380 100 L395 95 Z"/>
+    <!-- Sparkle 2 - right -->
+    <path d="M440 200 L443 208 L452 212 L443 216 L440 224 L437 216 L428 212 L437 208 Z" opacity="0.8"/>
+    <!-- Sparkle 3 - bottom right -->
+    <path d="M420 320 L424 332 L436 336 L424 340 L420 352 L416 340 L404 336 L416 332 Z" opacity="0.6"/>
+    <!-- Sparkle 4 - small -->
+    <path d="M360 60 L362 66 L368 68 L362 70 L360 76 L358 70 L352 68 L358 66 Z" opacity="0.7"/>
+    <!-- Sparkle 5 - bottom -->
+    <path d="M300 400 L304 412 L316 416 L304 420 L300 432 L296 420 L284 416 L296 412 Z" opacity="0.5"/>
+  </g>
+</svg>
